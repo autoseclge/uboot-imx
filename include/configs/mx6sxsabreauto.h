@@ -91,7 +91,7 @@
 	"console=ttymxc0\0" \
 	"bootargs=console=ttymxc0,115200 ubi.mtd=6 "  \
 		"root=ubi0:rootfs rootfstype=ubifs "		     \
-		"mtdparts=gpmi-nand:64m(boot),16m(kernel),16m(dtb),1m(tee),-(rootfs)\0"\
+		"mtdparts=gpmi-nand:64m(boot),16m(kernel),16m(dtb),1m(tee),-(rootfs)\0" \
 	"bootcmd=nand read ${loadaddr} 0x4000000 0x800000;"\
 		"nand read ${fdt_addr} 0x5000000 0x100000;"\
 		"if test ${tee} = yes; then " \
@@ -99,7 +99,7 @@
 			"bootm ${teeaddr} - ${fdt_addr};" \
 		"else " \
 			"bootz ${loadaddr} - ${fdt_addr};" \
-		"fi;\0"
+		"fi\0"
 
 #else
 #define CONFIG_EXTRA_ENV_SETTINGS \
@@ -197,7 +197,7 @@
 			   "else run netboot; " \
 			   "fi; " \
 		   "fi; " \
-	   "else run netboot; fi;\0"
+	   "else run netboot; fi"
 #endif
 
 /* Miscellaneous configurable options */

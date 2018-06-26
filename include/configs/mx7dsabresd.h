@@ -162,7 +162,7 @@
 			"bootm ${teeaddr} - ${fdt_addr}; " \
 		"else " \
 			"bootz ${loadaddr} - ${fdt_addr}; " \
-		"fi;\0"
+		"fi\0"
 
 #else
 #define CONFIG_EXTRA_ENV_SETTINGS \
@@ -261,7 +261,7 @@
 			   "else run netboot; " \
 			   "fi; " \
 		   "fi; " \
-	   "else run netboot; fi;\0"
+	   "else run netboot; fi"
 #endif
 
 #define CONFIG_CMD_MEMTEST

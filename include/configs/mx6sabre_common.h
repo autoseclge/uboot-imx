@@ -92,7 +92,7 @@
 				"setexpr fw_sz ${fw_sz} + 1; "	\
 				"mmc write ${loadaddr} 0x2 ${fw_sz}; " \
 			"fi; "	\
-		"fi;\0"
+		"fi\0"
 #else
 #define EMMC_ENV ""
 #endif
@@ -123,7 +123,7 @@
 			"bootm ${teeaddr} - ${fdt_addr}; " \
 		"else " \
 			"bootz ${loadaddr} - ${fdt_addr}; " \
-		"fi;\0"
+		"fi\0"
 
 #elif defined(CONFIG_SYS_BOOT_SATA)
 
@@ -142,7 +142,7 @@
 				"sata read ${tee_addr} 0x9000 0x2000; " \
 			"else " \
 				"bootz ${loadaddr} - ${fdt_addr}; " \
-			"fi;\0" \
+			"fi\0" \
 		"bootcmd=run bootcmd_sata \0"
 
 #else
@@ -182,7 +182,7 @@
 				"setexpr fw_sz ${fw_sz} + 1; "	\
 				"mmc write ${loadaddr} 0x2 ${fw_sz}; " \
 			"fi; "	\
-		"fi;\0" \
+		"fi\0" \
 	EMMC_ENV	  \
 	"smp=" CONFIG_SYS_NOSMP "\0"\
 	"mmcargs=setenv bootargs console=${console},${baudrate} ${smp} " \
@@ -292,7 +292,7 @@
 			"else run netboot; " \
 			"fi; " \
 		"fi; " \
-	"else run netboot; fi;\0"
+	"else run netboot; fi"
 #endif
 
 #define CONFIG_ARP_TIMEOUT     200UL

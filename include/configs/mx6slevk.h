@@ -185,7 +185,7 @@
 			   "else run netboot; " \
 			   "fi; " \
 		   "fi; " \
-	   "else run netboot; fi;\0"
+	   "else run netboot; fi"
 
 /* Miscellaneous configurable options */
 #define CONFIG_CMD_MEMTEST
