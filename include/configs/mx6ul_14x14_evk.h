@@ -237,7 +237,7 @@
 				"if test $fdt_file = undefined; then " \
 					"echo WARNING: Could not determine dtb to use; " \
 				"fi; " \
-			"fi;\0"
+			"fi;\0" \
 
 #define CONFIG_BOOTCOMMAND \
 	   "run findfdt;" \

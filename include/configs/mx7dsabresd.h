@@ -247,7 +247,7 @@
 		"findfdt="\
 			"if test $fdt_file = undefined; then " \
 				"setenv fdt_file imx7d-sdb.dtb; " \
-			"fi;\0"
+			"fi;\0" \
 
 #define CONFIG_BOOTCOMMAND \
 	   "run findfdt;" \

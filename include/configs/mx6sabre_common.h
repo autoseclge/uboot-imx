@@ -277,7 +277,7 @@
 					"setenv tee_file uTee-6dlsdb; fi; " \
 				"if test $tee_file = undefined; then " \
 					"echo WARNING: Could not determine tee to use; fi; " \
-			"fi;\0"
+			"fi;\0" \
 
 #define CONFIG_BOOTCOMMAND \
 	"run findfdt;" \
